@@ -1,0 +1,24 @@
+version: "3"
+services:
+  metawebanalyzeapp:
+    image: webapp
+    environment:
+      - host_name=www.facebook.com
+    volumes:
+      - /home/artijain/webanalyze/log:/app/log
+  googlewebanalyzeapp:
+    image: webapp
+    environment:
+      - host_name=www.google.com
+  netflixwebanalyzeapp:
+    image: webapp
+    environment:
+      - host_name=www.netflix.com
+  applewebanalyzeapp:
+    image: webapp
+    environment:
+      - host_name=www.apple.com
+  amazonwebanalyzeapp:
+    image: webapp
+    environment:
+      - host_name=www.amazon.com
