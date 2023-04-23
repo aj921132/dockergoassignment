@@ -5,20 +5,28 @@ services:
     environment:
       - host_name=www.facebook.com
     volumes:
-      - /home/artijain/webanalyze/log:/app/log
+      - ./log:/app/log
   googlewebanalyzeapp:
     image: webapp
     environment:
       - host_name=www.google.com
+    volumes:
+      - ./log:/app/log
   netflixwebanalyzeapp:
     image: webapp
     environment:
       - host_name=www.netflix.com
+    volumes:
+      - ./log:/app/log  
   applewebanalyzeapp:
     image: webapp
     environment:
       - host_name=www.apple.com
+    volumes:
+      - ./log:/app/log
   amazonwebanalyzeapp:
     image: webapp
     environment:
       - host_name=www.amazon.com
+    volumes:
+      - ./log:/app/log  
