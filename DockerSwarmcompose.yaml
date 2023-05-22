@@ -5,12 +5,13 @@ services:
     ports:
       - "8080:80"
   metawebanalyzeapp:
-    replicas: 2
     image: webapp
     environment:
       - host_name=www.facebook.com
     volumes:
       - ./log:/app/log
+    deploy:
+      replicas: 2  
   googlewebanalyzeapp:
     image: webapp
     environment:
