@@ -12,6 +12,8 @@ services:
       - ./log:/app/log
     deploy:
       replicas: 2  
+      placement:
+        constraints: [node.role == worker]
   googlewebanalyzeapp:
     image: webapp
     environment:
